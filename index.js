@@ -351,8 +351,14 @@ Use artistByCountry to do the following:
 For example artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya', 'El Greco' ]
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(arr, artistNationality){
+  const sameCountry = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].nationality === artistNationality){
+      sameCountry.push(arr[i].name);
+    }
+  }
+  return sameCountry;
 }
 
 
